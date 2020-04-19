@@ -12,6 +12,8 @@ def linearSearch(lst, searchValue):
         if lst[i] == searchValue:
             return i
     return None
+
+
 def main():
     '''
     Objective: To search for an element in the list provided as an
@@ -23,6 +25,7 @@ def main():
     searchVal = eval(input('Enter the value to be searched: '))
     searchResult = linearSearch(lst, searchVal)
     print(searchVal, ' found at index ', searchResult)
-    
-if __name__=='__main__':
+
+
+if __name__ == '__main__':
     main()
