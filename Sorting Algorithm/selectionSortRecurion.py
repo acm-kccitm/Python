@@ -1,4 +1,4 @@
-def minIndex(list,lowerBound,upperBound):
+def minIndex(list, lowerBound, upperBound):
     '''
     Objective: to find the index of the minimum numbrer of the list
     Input Parameters:
@@ -8,15 +8,16 @@ def minIndex(list,lowerBound,upperBound):
     Return Value: the index of the minimum numbrer of the list
     '''
 
-    #Approach: using recursion
-    if upperBound==lowerBound:
+    # Approach: using recursion
+    if upperBound == lowerBound:
         return upperBound
     elif list[upperBound] > list[lowerBound]:
-        return minIndex(list,lowerBound,upperBound-1)
+        return minIndex(list, lowerBound, upperBound-1)
     else:
-        return minIndex(list,lowerBound+1,upperBound)
+        return minIndex(list, lowerBound+1, upperBound)
 
-def selectionSort(list , count = 0 ):
+
+def selectionSort(list, count=0):
     '''
     Objective: to sort a list using selection sort algorithm
     Input Parameters:
@@ -24,17 +25,17 @@ def selectionSort(list , count = 0 ):
         count: for counting till length of list
     Return Value: sorted List
     '''
-    #Approach : using function minIndex()
-    if list==[]:
+    # Approach : using function minIndex()
+    if list == []:
         return []
-    elif count==len(list)-1:
-            return list
+    elif count == len(list)-1:
+        return list
     else:
-        temp=minIndex(list,count,len(list)-1)
-        list[count],list[temp]=list[temp],list[count]
-        return selectionSort(list,count+1)
-    
+        temp = minIndex(list, count, len(list)-1)
+        list[count], list[temp] = list[temp], list[count]
+        return selectionSort(list, count+1)
 
-list = [-3,23,-9,12,2,6,1,5]
-print("Unsorted List : ",list)
-print("Sorted List : ",selectionSort(list))
+
+list = [-3, 23, -9, 12, 2, 6, 1, 5]
+print("Unsorted List : ", list)
+print("Sorted List : ", selectionSort(list))

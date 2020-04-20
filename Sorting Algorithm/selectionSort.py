@@ -13,6 +13,7 @@ def selectionSort(lst):
         if minIndex != i:
             lst[minIndex], lst[i] = lst[i], lst[minIndex]
 
+
 def main():
     '''
     Objective: To sort the list provided as an input by the user
@@ -23,6 +24,7 @@ def main():
     print('Sorted List')
     selectionSort(lst)
     print(lst)
-    
-if __name__=='__main__':
+
+
+if __name__ == '__main__':
     main()

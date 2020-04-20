@@ -1,10 +1,10 @@
-def deepCopy(lst1, lst2 = []):
+def deepCopy(lst1, lst2=[]):
     '''
     Objective: To create deep copy of a list lst1
     Input Parameters: lst1, lst2 - list
     Return Value: lst2 - list
     '''
-    if lst1==[]:
+    if lst1 == []:
         pass
     else:
         if type(lst1[0]) != list:
@@ -14,6 +14,7 @@ def deepCopy(lst1, lst2 = []):
             deepCopy(lst1[0], lst2[-1])
         deepCopy(lst1[1:], lst2)
     return lst2
+
 
 def main():
     '''
@@ -25,5 +26,6 @@ def main():
     lst2 = deepCopy(lst1)
     print('Deep copy of list lst1 is ', lst2)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()

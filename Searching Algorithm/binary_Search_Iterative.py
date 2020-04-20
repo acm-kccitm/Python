@@ -18,6 +18,7 @@ def binarySearch(lst, searchValue):
             low = mid + 1
     return None
 
+
 def isSorted(lst):
     '''
     Objective: To find whether the list is sorted in ascending order.
@@ -25,10 +26,11 @@ def isSorted(lst):
     Return Value: True if list is sorted
                   False otherwise
     '''
-    for i in range(1,len(lst)):
+    for i in range(1, len(lst)):
         if lst[i] < lst[i-1]:
             return False
     return True
+
 
 def main():
     '''
@@ -44,5 +46,6 @@ def main():
         searchVal = eval(input('Enter the value to be searched: '))
         print(searchVal, 'found at index', binarySearch(lst, searchVal))
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()

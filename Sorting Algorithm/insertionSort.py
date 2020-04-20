@@ -8,10 +8,11 @@ def insertionSort(lst):
     for i in range(1, len(lst)):
         temp = lst[i]
         j = i - 1
-        while j >= 0 and lst[j] > temp: # shift lst[j] right
+        while j >= 0 and lst[j] > temp:  # shift lst[j] right
             lst[j + 1] = lst[j]
             j = j-1
         lst[j + 1] = temp
+
 
 def main():
     '''
@@ -24,5 +25,6 @@ def main():
     insertionSort(lst)
     print(lst)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     main()
